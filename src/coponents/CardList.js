@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Button, Image, Text, View} from 'react-native';
+import {dispatchCardText} from '../Context/Context';
 import {styles} from '../styles/styles';
 
-const CardList = ({navigation, setDetails, ...props}) => {
+const CardList = ({navigation, ...props}) => {
+  const {setDetails} = useContext(dispatchCardText);
+
   const handlerPress = data => {
     setDetails(data);
     return navigation.navigate('Details');

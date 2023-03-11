@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {View, Image, Text} from 'react-native';
+import {cardConText} from '../Context/Context';
 import {styles} from '../styles/styles';
 
-export const DetailsScreen = ({details}) => {
+export const DetailsScreen = () => {
+  const {details} = useContext(cardConText);
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={{uri: details.image}} />
