@@ -3,9 +3,14 @@ import {StyleSheet} from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+  },
+  row: {
+    flex: 1,
+    justifyContent: 'space-evenly',
   },
   titulo: {
     fontSize: 30,
@@ -28,7 +33,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#E0E0E0',
-    width: '40%',
+    width: '43%',
   },
   text: {
     color: 'black',

@@ -5,9 +5,9 @@ import React, {useState, useEffect} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {getApi} from './api/api';
-import {HomeScreen} from './HomeScreen';
-import {DetailsScreen} from './DetailsScreen';
+import {getApi} from '../api/api';
+import {HomeScreen} from './coponents/HomeScreen';
+import {DetailsScreen} from './coponents/DetailsScreen';
 
 const Stack = createStackNavigator();
 
