@@ -1,13 +1,12 @@
 import React, {useContext} from 'react';
 import {View, FlatList} from 'react-native';
 import {cardConText} from '../Context/Context';
-import Loagind from '../Loading/Loading';
+import Loaging from '../Loading/Loading';
 import CardList from './CardList';
 import {styles} from '../styles/styles';
 
 export const HomeScreen = ({navigation}) => {
   const {data} = useContext(cardConText);
-  console.log(Loagind());
   return (
     <View style={styles.container}>
       {data ? (
@@ -20,7 +19,7 @@ export const HomeScreen = ({navigation}) => {
           )}
         />
       ) : (
-        <Loagind />
+        <Loaging />
       )}
     </View>
   );
