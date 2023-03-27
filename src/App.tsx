@@ -5,8 +5,8 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {HomeScreen} from './coponents/HomeScreen';
-import {DetailsScreen} from './coponents/DetailsScreen';
+import {HomeScreen} from './components/HomeScreen';
+import {DetailsScreen} from './components/DetailsScreen';
 import Context from './Context/Context';
 
 const Stack = createStackNavigator();

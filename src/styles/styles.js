@@ -26,14 +26,13 @@ export const styles = StyleSheet.create({
   },
   cardsContainer: {
     margin: 5,
-    borderColor: 'gray',
-    borderWidth: 1,
     borderRadius: 8,
     padding: 5,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#E0E0E0',
     width: '43%',
+    elevation: 15,
   },
   text: {
     color: 'black',
