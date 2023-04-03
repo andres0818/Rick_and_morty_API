@@ -7,10 +7,11 @@ export const dispatchCardText = createContext();
 const Context = ({children}) => {
   const [data, setData] = useState();
   const [details, setDetails] = useState();
+  const [character, setCharacter] = useState('');
 
   useEffect(() => {
     const getData = () => {
-      getApi()
+      getApi(character)
         .then(result => {
           setData(result.data.results);
         })
@@ -19,10 +20,10 @@ const Context = ({children}) => {
         });
     };
     getData();
-  }, []);
+  }, [character]);
 
   const state = {data, details};
-  const dispatch = {setData, setDetails};
+  const dispatch = {setData, setDetails, setCharacter};
 
   return (
     <cardConText.Provider value={state}>

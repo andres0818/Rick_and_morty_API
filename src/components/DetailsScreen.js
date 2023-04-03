@@ -1,10 +1,17 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {View, Image, Text} from 'react-native';
 import {cardConText} from '../Context/Context';
 import {styles} from '../styles/styles';
 
-export const DetailsScreen = () => {
+export const DetailsScreen = ({navigation}) => {
   const {details} = useContext(cardConText);
+
+  useEffect(() => {
+    navigation.setOptions({
+      title: details.name,
+    });
+  }, [details]);
+
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={{uri: details.image}} />

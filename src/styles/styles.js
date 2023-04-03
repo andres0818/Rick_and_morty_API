@@ -8,6 +8,13 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
+  textInput: {
+    width: '90%',
+    backgroundColor: '#D3D3D3',
+    borderRadius: 19,
+    marginVertical: 10,
+    paddingHorizontal: 12,
+  },
   row: {
     flex: 1,
     justifyContent: 'space-evenly',
