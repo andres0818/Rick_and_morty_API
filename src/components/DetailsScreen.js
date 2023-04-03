@@ -2,15 +2,24 @@ import React, {useContext, useEffect} from 'react';
 import {View, Image, Text} from 'react-native';
 import {cardConText} from '../Context/Context';
 import {styles} from '../styles/styles';
+import {IconNavBar} from './IconNavBar/IconNavBar';
 
 export const DetailsScreen = ({navigation}) => {
   const {details} = useContext(cardConText);
 
   useEffect(() => {
     navigation.setOptions({
+      headerTitle: () => (
+        <IconNavBar icon={details.image} title={details.name} radius={true} />
+      ),
+    });
+  }, [details, navigation]);
+
+  useEffect(() => {
+    navigation.setOptions({
       title: details.name,
     });
-  }, [details]);
+  }, [details.name, navigation]);
 
   return (
     <View style={styles.container}>
