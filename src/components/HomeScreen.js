@@ -20,8 +20,7 @@ export const HomeScreen = ({navigation}) => {
       {data ? (
         <FlatList
           data={data}
-          numColumns={2}
-          columnWrapperStyle={styles.row}
+          contentContainerStyle={styles.row}
           renderItem={({item: card}) => (
             <CardList {...card} navigation={navigation} />
           )}
