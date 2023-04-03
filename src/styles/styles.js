@@ -6,6 +6,8 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+    width: '100%',
+    height: '100%',
   },
   textInput: {
     width: '90%',
@@ -16,9 +18,11 @@ export const styles = StyleSheet.create({
     color: 'black',
   },
   row: {
-    width: 380,
+    width: '100%',
     marginHorizontal: '5%',
     padding: 15,
+    justifyContent: 'center',
+    alignContent: 'center',
   },
   titulo: {
     fontSize: 30,
