@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
     width: '100%',
     height: '100%',
+    paddingVertical: 35,
   },
   textInput: {
     width: '90%',
@@ -17,9 +18,10 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 12,
     color: 'black',
   },
+
   row: {
     width: '100%',
-    marginHorizontal: '5%',
+    gap: 10,
     padding: 15,
     justifyContent: 'center',
     alignContent: 'center',

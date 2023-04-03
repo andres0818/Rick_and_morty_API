@@ -13,13 +13,14 @@ export const cardStyle = StyleSheet.create({
   },
   cardsContainer: {
     flexDirection: 'row',
+    marginHorizontal: 10,
     marginVertical: 12,
     borderRadius: 8,
     padding: 8,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#E0E0E0',
-    width: '90%',
+    width: 320,
     elevation: 10,
   },
   containerDescription: {
