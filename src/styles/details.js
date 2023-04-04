@@ -75,26 +75,28 @@ export const detailsStyles = StyleSheet.create({
     borderRadius: 10,
     top: 35,
     paddingVertical: 4,
+    overflow: 'hidden', // oculta cualquier exceso de contenido
   },
   descriptionTitle: {
+    width: '50%',
     textAlignVertical: 'center',
     fontSize: 24,
     fontWeight: 'bold',
     color: '#ffffff',
     textAlign: 'center',
+    overflow: 'hidden',
   },
   descriptionSubTitle: {
+    width: '50%',
     fontWeight: 'bold',
     fontSize: 20,
-    marginLeft: 20,
-    paddingHorizontal: 10,
     backgroundColor: '#fffff94b',
     alignSelf: 'flex-start',
     borderRadius: 10,
     textAlign: 'center',
+    padding: 4,
+    marginRight: 10,
     color: '#000000',
-  },
-  text: {
-    color: 'black',
+    overflow: 'hidden',
   },
 });

@@ -54,7 +54,10 @@ export const DetailsScreen = ({navigation}) => {
           </View>
           <View style={containerText}>
             <Text style={detailsStyles.descriptionTitle}>origin: </Text>
-            <Text style={detailsStyles.descriptionSubTitle}>
+            <Text
+              style={detailsStyles.descriptionSubTitle}
+              ellipsizeMode="tail"
+              numberOfLines={1}>
               {details.origin.name}
             </Text>
           </View>
