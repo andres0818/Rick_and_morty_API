@@ -2,7 +2,6 @@ import React, {useContext, useEffect} from 'react';
 import {View, Image, Text} from 'react-native';
 import {cardConText} from '../Context/Context';
 import {IconNavBar} from './IconNavBar/IconNavBar';
-import {cardStyle} from '../styles/cards';
 import {detailsStyles} from '../styles/details';
 
 export const DetailsScreen = ({navigation}) => {
@@ -29,23 +28,44 @@ export const DetailsScreen = ({navigation}) => {
     details.species === 'Human' && detailsStyles.Human,
   ];
 
+  const containerText = [
+    detailsStyles.textContainer,
+    details.species === 'Alien' && detailsStyles.Alien,
+    details.species === 'Mythological Creature' && detailsStyles.Mytological,
+    details.species === 'Human' && detailsStyles.Human,
+  ];
+
   return (
     <View style={containerStyle}>
       <View style={detailsStyles.containerInfo}>
-        <Text style={detailsStyles.title}>Name: {details.name}</Text>
-        <Text>Specie: {details.species}</Text>
+        <Text style={detailsStyles.title}>{details.name}</Text>
+        <Text style={detailsStyles.subTitle}>Specie: {details.species}</Text>
       </View>
       <View style={detailsStyles.containerDescription}>
-        <Image style={detailsStyles.img} source={{uri: details.image}} />
+        <View style={detailsStyles.imgContainer}>
+          <Image style={detailsStyles.img} source={{uri: details.image}} />
+        </View>
+        <View style={detailsStyles.description}>
+          <View style={containerText}>
+            <Text style={detailsStyles.descriptionTitle}>Status: </Text>
+            <Text style={detailsStyles.descriptionSubTitle}>
+              {details.status}
+            </Text>
+          </View>
+          <View style={containerText}>
+            <Text style={detailsStyles.descriptionTitle}>Gender: </Text>
+            <Text style={detailsStyles.descriptionSubTitle}>
+              {details.gender}
+            </Text>
+          </View>
+          <View style={containerText}>
+            <Text style={detailsStyles.descriptionTitle}>origin: </Text>
+            <Text style={detailsStyles.descriptionSubTitle}>
+              {details.origin?.name}
+            </Text>
+          </View>
+        </View>
       </View>
     </View>
   );
 };
-
-{
-  /* 
-        <Text style={styles.text}>Status: {details.status}</Text>
-
-<Text style={styles.text}>Gender: {details.gender}</Text>
-<Text style={styles.text}>{details.origin.name}</Text> */
-}
