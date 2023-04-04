@@ -75,7 +75,8 @@ export const detailsStyles = StyleSheet.create({
     borderRadius: 10,
     top: 35,
     paddingVertical: 4,
-    overflow: 'hidden', // oculta cualquier exceso de contenido
+    overflow: 'hidden',
+    backgroundColor: '#E0E0E0',
   },
   descriptionTitle: {
     width: '50%',
