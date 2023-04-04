@@ -15,12 +15,6 @@ export const DetailsScreen = ({navigation}) => {
     });
   }, [details, navigation]);
 
-  useEffect(() => {
-    navigation.setOptions({
-      title: details.name,
-    });
-  }, [details.name, navigation]);
-
   const containerStyle = [
     detailsStyles.container,
     details.species === 'Alien' && detailsStyles.Alien,
