@@ -2,4 +2,4 @@
 
 # proyecto realizado con react native cli
 
-<img src="./README_IMG/Detalles.jpeg">
+<img src="./README_IMG/Detalles.jpeg" width="380px">
