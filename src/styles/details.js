@@ -14,7 +14,7 @@ export const detailsStyles = StyleSheet.create({
   container: {
     flex: 1,
     width: '100%',
-    height: '100%',
+    height: 800,
     overflow: 'scroll',
   },
 
@@ -50,7 +50,7 @@ export const detailsStyles = StyleSheet.create({
   imgContainer: {
     position: 'absolute',
     display: 'flex',
-    top: -100,
+    top: '-25%',
     zIndex: 4,
     borderRadius: 15,
     elevation: 15,
