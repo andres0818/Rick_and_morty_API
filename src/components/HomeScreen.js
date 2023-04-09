@@ -1,5 +1,5 @@
-import React, {useContext, useLayoutEffect, useRef, useState} from 'react';
-import {View, FlatList, TextInput, Dimensions} from 'react-native';
+import React, {useContext} from 'react';
+import {View, FlatList, TextInput} from 'react-native';
 import {cardConText, dispatchCardText} from '../Context/Context';
 import Loaging from '../Loading/Loading';
 import CardList from './CardList';
