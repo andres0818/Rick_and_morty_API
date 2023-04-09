@@ -6,25 +6,8 @@ import CardList from './CardList';
 import {styles} from '../styles/styles';
 
 export const HomeScreen = ({navigation}) => {
-  const {data} = useContext(cardConText);
+  const {data, numColumns} = useContext(cardConText);
   const {setCharacter} = useContext(dispatchCardText);
-
-  const dimensionsRef = useRef(Dimensions.get('window'));
-
-  const [numColumns, setNumColumns] = useState(
-    dimensionsRef.current.width > 760 ? 2 : 1,
-  );
-
-  useLayoutEffect(() => {
-    const onLayout = () => {
-      dimensionsRef.current = Dimensions.get('window');
-      setNumColumns(dimensionsRef.current.width > 760 ? 2 : 1);
-    };
-
-    Dimensions.addEventListener('change', onLayout);
-
-    return () => Dimensions.removeEventListener('change', onLayout);
-  }, []);
 
   return (
     <View style={styles.container}>
